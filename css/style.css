@@ -1952,3 +1952,30 @@ h1, h2, h3, h4, h5,
 .letter:nth-child(17){
   transition-delay: 0.48s;
 }
+
+
+
+.call-button {
+  background-color: #205322;
+  border: none;
+  color: rgb(186, 186, 186);
+  padding: 6px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius:50px;
+}
+.call-button:hover {
+  background-color: #2f5a31;
+  color: rgb(255, 255, 255);
+}
+@media (max-width: 768px) {
+  .call-button {
+    font-size: 20px !important;
+    margin: 4px 20px !important;
+    color: rgb(255, 255, 255) !important;
+  }
+}

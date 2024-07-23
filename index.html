@@ -62,21 +62,6 @@
       <div class="site-mobile-menu-body"></div>
     </div>
 
-    <div class="top-bar py-2" id="home-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 text-center text-lg-right order-lg-2">
-            <ul class="social-media m-0 p-0">
-              <li><a href="#" class="p-2"><span class="icon-facebook"></span></a></li>
-              <li><a href="#" class="p-2"><span class="icon-twitter"></span></a></li>
-              <li><a href="#" class="p-2"><span class="icon-instagram"></span></a></li>
-              <li><a href="#" class="p-2"><span class="icon-linkedin"></span></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
 
       <div class="container">
@@ -95,7 +80,7 @@
                   <a href="#services-section" class="nav-link">Our Expertise</a>
                 </li>
                 <li><a href="#team-section" class="nav-link">Our Team</a></li>
-                <li><a href="tel:+918606365297" class="nav-link ghost-button">Ring Us</a></li>
+                <li><button class="call-button" onclick="makeCall()">Ring Us</button></li>
               </ul>
             </nav>
           </div>
@@ -582,7 +567,7 @@
     function sendMessage() {
         const messageInput = document.querySelector('.message-input');
         const message = messageInput.value;
-        const phoneNumber = '+918606365297'; // replace with your phone number in international format, e.g., '1234567890'
+        const phoneNumber = '+918606365297';
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
         const button = document.querySelector('.whatsapp-button');
@@ -622,6 +607,13 @@
     });
   });
 </script>
-
+<script>
+  function makeCall() {
+      const phoneNumber = '+918606365297';
+      if (phoneNumber) {
+          window.location.href = `tel:${phoneNumber}`;
+      }
+  }
+</script>
   </body>
   </html>
