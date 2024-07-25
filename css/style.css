@@ -1854,14 +1854,14 @@ h1, h2, h3, h4, h5,
 }
 .whatsapp-button .fa-paper-plane {
   position: absolute;
-  right: 10px;
+  left: 10px;
   opacity: 0;
   transform: translateX(0);
   transition: all 1.5s ease;
 }
 .whatsapp-button.animate .fa-paper-plane {
   opacity: 1;
-  transform: translateX(500%);
+  transform: translateX(2000%);
 }
 
 @media (max-width: 768px) {
